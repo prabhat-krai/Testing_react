@@ -21,6 +21,7 @@ class Menu extends Component{
                             <CardBody>
                                     <CardTitle>{dish.name}</CardTitle>
                                     <CardText>{dish.description}</CardText>
+                                    
                             </ CardBody>
                         </Card>
                 );
@@ -56,13 +57,13 @@ class Menu extends Component{
         return(
             <div className="container">
             <div className="row">
-            <div className="row">
-                {this.renderDish(this.state.selectedDish)}
-            
-            </div>
-        
             {menu}
-            </div>
+                </div>
+                <div className="row">
+                  <div  className="col-12 col-md-5 m-1">
+                    {this.renderDish(this.state.selectedDish)}
+                  </div>
+                </div>
             </div>
         );
         
